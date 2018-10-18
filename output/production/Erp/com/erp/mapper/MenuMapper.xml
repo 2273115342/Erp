@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.erp.dao.MenuDao">
+	<resultMap type="com.erp.pojo.Menu" id="MenuMap">
+		<id property="menuId" column="menu_id" />
+		<result property="menuName" column="menu_name" />
+		<result property="menuLink" column="menu_link" />
+		<result property="parentId" column="parent_id" />
+		<result property="menuImg" column="menu_img" />
+		<result property="disOrder" column="dis_order" />
+		<result property="isHave" column="is_have" />
+		<collection property="accesslinks" column="menu_id"
+			javaType="ArrayList" ofType="com.erp.pojo.Accesslink" select="com.erp.dao.MenuDao.findAccesslinks" />
+		<collection property="childMenu" column="menu_id" javaType="ArrayList"
+			ofType="com.erp.pojo.Menu" select="com.erp.dao.MenuDao.findChildMenu" />
+	</resultMap>
+
+	<select id="findByUserId" parameterType="Integer" resultMap="MenuMap">
+		select m.menu_id,
+		m.menu_name,
+		m.menu_link,
+		m.parent_id,
+		m.menu_img,
+		m.disp_order,
+		m.is_have from t_rm rm
+		left join t_role r on rm.role_id = r.role_id
+		left join t_menu m on rm.menu_id = m.menu_id
+		left join t_employees e on e.role_id = rm.role_id
+		where e.e_id = #{userId} and m.parent_id is null
+		order by m.menu_id
+	</select>
+
+	<select id="findByRoleId" parameterType="Integer" resultMap="MenuMap">
+		select m.menu_id,
+		m.menu_name,
+		m.menu_link,
+		m.parent_id,
+		m.menu_img,
+		m.disp_order,
+		m.is_have from t_rm rm
+		left join t_role r on rm.role_id = r.role_id
+		left join t_menu m on rm.menu_id = m.menu_id
+		left join t_employees e on e.role_id = rm.role_id
+		where r.role_id = #{roleId}
+		order by m.menu_id
+	</select>
+
+	<select id="findAll" resultMap="MenuMap">
+		select * from t_menu
+	</select>
+
+	<select id="findChildMenu" parameterType="Integer" resultMap="MenuMap">
+		select * from t_menu where parent_id = #{menuId}
+	</select>
+
+	<select id="findAccesslinks" parameterType="Integer"
+		resultType="com.erp.pojo.Accesslink">
+		select a.link_id,a.link_name,a.link_address from
+		t_menu m
+		left join t_menu_accesslink tm on m.menu_id = tm.menu_id
+		left join
+		t_accesslink a on a.link_id = tm.link_id
+		where m.menu_id = #{menuId}
+	</select>
+
+	<select id="getHaveAccessLinks" parameterType="Integer"
+		resultType="String">
+		select ta.link_address from t_rm rm
+		left join t_role r on
+		rm.role_id = r.role_id
+		left join t_menu m on rm.menu_id = m.menu_id
+		left join t_employees e on e.role_id = rm.role_id
+		left join
+		t_menu_accesslink tma on tma.menu_id = m.menu_id
+		left join t_accesslink
+		ta on ta.link_id = tma.link_id
+		where e.e_id = #{userId} and ta.link_address is not null
+	</select>
+</mapper>

@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" rdbms="ORACLE" format-version="4.11">
+    <root id="1">
+      <ServerVersion>11.2.0.1</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="ERP">
+      <ObjectId>96</ObjectId>
+      <IntrospectionTimestamp>2018-10-19.03:46:45</IntrospectionTimestamp>
+      <CreatedTimestamp>2018-10-13.20:01:28</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:31</ModifiedTimestamp>
+      <CommentsHash>49428315887167</CommentsHash>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="PUBLIC">
+      <ObjectId>1</ObjectId>
+    </schema>
+    <schema id="4" parent="1" name="SYS">
+      <ObjectId>0</ObjectId>
+    </schema>
+    <schema id="5" parent="1" name="SYSTEM">
+      <ObjectId>5</ObjectId>
+    </schema>
+    <schema id="6" parent="1" name="OUTLN">
+      <ObjectId>9</ObjectId>
+    </schema>
+    <schema id="7" parent="1" name="DIP">
+      <ObjectId>14</ObjectId>
+    </schema>
+    <schema id="8" parent="1" name="ORACLE_OCM">
+      <ObjectId>21</ObjectId>
+    </schema>
+    <schema id="9" parent="1" name="DBSNMP">
+      <ObjectId>30</ObjectId>
+    </schema>
+    <schema id="10" parent="1" name="APPQOSSYS">
+      <ObjectId>31</ObjectId>
+    </schema>
+    <schema id="11" parent="1" name="WMSYS">
+      <ObjectId>32</ObjectId>
+    </schema>
+    <schema id="12" parent="1" name="EXFSYS">
+      <ObjectId>42</ObjectId>
+    </schema>
+    <schema id="13" parent="1" name="CTXSYS">
+      <ObjectId>43</ObjectId>
+    </schema>
+    <schema id="14" parent="1" name="XDB">
+      <ObjectId>45</ObjectId>
+    </schema>
+    <schema id="15" parent="1" name="ANONYMOUS">
+      <ObjectId>46</ObjectId>
+    </schema>
+    <schema id="16" parent="1" name="ORDSYS">
+      <ObjectId>53</ObjectId>
+    </schema>
+    <schema id="17" parent="1" name="ORDDATA">
+      <ObjectId>54</ObjectId>
+    </schema>
+    <schema id="18" parent="1" name="ORDPLUGINS">
+      <ObjectId>55</ObjectId>
+    </schema>
+    <schema id="19" parent="1" name="SI_INFORMTN_SCHEMA">
+      <ObjectId>56</ObjectId>
+    </schema>
+    <schema id="20" parent="1" name="MDSYS">
+      <ObjectId>57</ObjectId>
+    </schema>
+    <schema id="21" parent="1" name="OLAPSYS">
+      <ObjectId>61</ObjectId>
+    </schema>
+    <schema id="22" parent="1" name="MDDATA">
+      <ObjectId>65</ObjectId>
+    </schema>
+    <schema id="23" parent="1" name="SPATIAL_WFS_ADMIN_USR">
+      <ObjectId>67</ObjectId>
+    </schema>
+    <schema id="24" parent="1" name="SPATIAL_CSW_ADMIN_USR">
+      <ObjectId>70</ObjectId>
+    </schema>
+    <schema id="25" parent="1" name="SYSMAN">
+      <ObjectId>72</ObjectId>
+    </schema>
+    <schema id="26" parent="1" name="MGMT_VIEW">
+      <ObjectId>74</ObjectId>
+    </schema>
+    <schema id="27" parent="1" name="FLOWS_FILES">
+      <ObjectId>75</ObjectId>
+    </schema>
+    <schema id="28" parent="1" name="APEX_PUBLIC_USER">
+      <ObjectId>76</ObjectId>
+    </schema>
+    <schema id="29" parent="1" name="APEX_030200">
+      <ObjectId>78</ObjectId>
+    </schema>
+    <schema id="30" parent="1" name="OWBSYS">
+      <ObjectId>79</ObjectId>
+    </schema>
+    <schema id="31" parent="1" name="OWBSYS_AUDIT">
+      <ObjectId>83</ObjectId>
+    </schema>
+    <schema id="32" parent="1" name="SCOTT">
+      <ObjectId>84</ObjectId>
+    </schema>
+    <schema id="33" parent="1" name="HR">
+      <ObjectId>85</ObjectId>
+    </schema>
+    <schema id="34" parent="1" name="OE">
+      <ObjectId>86</ObjectId>
+    </schema>
+    <schema id="35" parent="1" name="IX">
+      <ObjectId>87</ObjectId>
+    </schema>
+    <schema id="36" parent="1" name="SH">
+      <ObjectId>88</ObjectId>
+    </schema>
+    <schema id="37" parent="1" name="PM">
+      <ObjectId>89</ObjectId>
+    </schema>
+    <schema id="38" parent="1" name="BI">
+      <ObjectId>90</ObjectId>
+    </schema>
+    <schema id="39" parent="1" name="JS">
+      <ObjectId>91</ObjectId>
+    </schema>
+    <schema id="40" parent="1" name="FEEDBACK">
+      <ObjectId>93</ObjectId>
+    </schema>
+    <schema id="41" parent="1" name="BOOK1">
+      <ObjectId>94</ObjectId>
+    </schema>
+    <schema id="42" parent="1" name="BOOKBOOK">
+      <ObjectId>95</ObjectId>
+    </schema>
+    <schema id="43" parent="1" name="XS$NULL">
+      <ObjectId>2147483638</ObjectId>
+    </schema>
+    <sequence id="44" parent="2" name="SEQ_ACCESSLINK">
+      <ObjectId>77890</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:31</ModifiedTimestamp>
+      <SequenceIdentity>1..99999999</SequenceIdentity>
+    </sequence>
+    <sequence id="45" parent="2" name="SEQ_DEPARTMENT">
+      <ObjectId>77884</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:31</ModifiedTimestamp>
+      <SequenceIdentity>1..99999999</SequenceIdentity>
+    </sequence>
+    <sequence id="46" parent="2" name="SEQ_EMPLOYEES">
+      <ObjectId>77883</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:31</ModifiedTimestamp>
+      <SequenceIdentity>1..99999999</SequenceIdentity>
+    </sequence>
+    <sequence id="47" parent="2" name="SEQ_GOODS">
+      <ObjectId>77887</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:31</ModifiedTimestamp>
+      <SequenceIdentity>1..99999999</SequenceIdentity>
+    </sequence>
+    <sequence id="48" parent="2" name="SEQ_LOG">
+      <ObjectId>77885</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:31</ModifiedTimestamp>
+      <SequenceIdentity>1..99999999</SequenceIdentity>
+    </sequence>
+    <sequence id="49" parent="2" name="SEQ_MENU">
+      <ObjectId>77880</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:31</ModifiedTimestamp>
+      <SequenceIdentity>1..99999999</SequenceIdentity>
+    </sequence>
+    <sequence id="50" parent="2" name="SEQ_MENU_ACCESSLINK">
+      <ObjectId>77891</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:31</ModifiedTimestamp>
+      <SequenceIdentity>1..99999999</SequenceIdentity>
+    </sequence>
+    <sequence id="51" parent="2" name="SEQ_RM">
+      <ObjectId>77881</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:31</ModifiedTimestamp>
+      <SequenceIdentity>1..99999999</SequenceIdentity>
+    </sequence>
+    <sequence id="52" parent="2" name="SEQ_ROLE">
+      <ObjectId>77882</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:31</ModifiedTimestamp>
+      <SequenceIdentity>1..99999999</SequenceIdentity>
+    </sequence>
+    <sequence id="53" parent="2" name="SEQ_SUPPLIER">
+      <ObjectId>77886</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:31</ModifiedTimestamp>
+      <SequenceIdentity>1..99999999</SequenceIdentity>
+    </sequence>
+    <sequence id="54" parent="2" name="SEQ_WAREHOUSE">
+      <ObjectId>77889</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:31</ModifiedTimestamp>
+      <SequenceIdentity>1..99999999</SequenceIdentity>
+    </sequence>
+    <sequence id="55" parent="2" name="SEQ_WG">
+      <ObjectId>77888</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:31</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:31</ModifiedTimestamp>
+      <SequenceIdentity>1..99999999</SequenceIdentity>
+    </sequence>
+    <table id="56" parent="2" name="T_ACCESSLINK">
+      <ObjectId>77856</ObjectId>
+      <Comment>系统所有的访问链接表</Comment>
+      <CreatedTimestamp>2018-10-13.20:01:28</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:28</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="57" parent="2" name="T_DEPARTMENT">
+      <ObjectId>77858</ObjectId>
+      <Comment>部门表</Comment>
+      <CreatedTimestamp>2018-10-13.20:01:28</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:28</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="58" parent="2" name="T_EMPLOYEES">
+      <ObjectId>77860</ObjectId>
+      <Comment>用户信息表</Comment>
+      <CreatedTimestamp>2018-10-13.20:01:28</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="59" parent="2" name="T_GOODS">
+      <ObjectId>77862</ObjectId>
+      <Comment>商品表</Comment>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="60" parent="2" name="T_LOG">
+      <ObjectId>77864</ObjectId>
+      <Comment>该表用来记录仓库商品的改变</Comment>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="61" parent="2" name="T_MENU">
+      <ObjectId>77866</ObjectId>
+      <Comment>系统菜单表</Comment>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="62" parent="2" name="T_MENU_ACCESSLINK">
+      <ObjectId>77868</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="63" parent="2" name="T_RM">
+      <ObjectId>77870</ObjectId>
+      <Comment>角色对应的菜单表</Comment>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="64" parent="2" name="T_ROLE">
+      <ObjectId>77872</ObjectId>
+      <Comment>系统角色表</Comment>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="65" parent="2" name="T_SUPPLIER">
+      <ObjectId>77874</ObjectId>
+      <Comment>供应商信息表</Comment>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="66" parent="2" name="T_WAREHOUSE">
+      <ObjectId>77876</ObjectId>
+      <Comment>仓库信息表</Comment>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="67" parent="2" name="T_WG">
+      <ObjectId>77878</ObjectId>
+      <Comment>仓库的商品库存表</Comment>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <column id="68" parent="56" name="LINK_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="56" name="LINK_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(40 byte)|0s</DataType>
+    </column>
+    <column id="70" parent="56" name="LINK_ADDRESS">
+      <Position>3</Position>
+      <DataType>VARCHAR2(40 byte)|0s</DataType>
+    </column>
+    <index id="71" parent="56" name="PK_T_ACCESSLINK">
+      <ObjectId>77857</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:28</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:28</ModifiedTimestamp>
+      <TablespaceName>NEWTURE</TablespaceName>
+      <ColNames>LINK_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="72" parent="56" name="PK_T_ACCESSLINK">
+      <ModifiedTimestamp>2018-10-13.20:01:28</ModifiedTimestamp>
+      <ColNames>LINK_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_T_ACCESSLINK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="73" parent="57" name="DEPT_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="74" parent="57" name="DEPT_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+    </column>
+    <index id="75" parent="57" name="PK_T_DEPARTMENT">
+      <ObjectId>77859</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:28</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:28</ModifiedTimestamp>
+      <TablespaceName>NEWTURE</TablespaceName>
+      <ColNames>DEPT_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="76" parent="57" name="PK_T_DEPARTMENT">
+      <ModifiedTimestamp>2018-10-13.20:01:28</ModifiedTimestamp>
+      <ColNames>DEPT_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_T_DEPARTMENT</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="77" parent="58" name="E_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="58" name="ROLE_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <column id="79" parent="58" name="DEPT_ID">
+      <Position>3</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <column id="80" parent="58" name="E_NAME">
+      <Position>4</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+    </column>
+    <column id="81" parent="58" name="E_IPHONE">
+      <Position>5</Position>
+      <DataType>NUMBER(11 digit)|0s</DataType>
+    </column>
+    <column id="82" parent="58" name="E_NOTE">
+      <Position>6</Position>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+    </column>
+    <column id="83" parent="58" name="E_ACCOUNT">
+      <Position>7</Position>
+      <DataType>VARCHAR2(10 byte)|0s</DataType>
+    </column>
+    <column id="84" parent="58" name="E_PASSWORD">
+      <Position>8</Position>
+      <DataType>VARCHAR2(15 byte)|0s</DataType>
+    </column>
+    <index id="85" parent="58" name="PK_T_EMPLOYEES">
+      <ObjectId>77861</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:28</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:28</ModifiedTimestamp>
+      <TablespaceName>NEWTURE</TablespaceName>
+      <ColNames>E_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="86" parent="58" name="PK_T_EMPLOYEES">
+      <ModifiedTimestamp>2018-10-13.20:01:28</ModifiedTimestamp>
+      <ColNames>E_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_T_EMPLOYEES</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="87" parent="58" name="FK_T_EMPLOY_REFERENCE_T_ROLE">
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <ColNames>ROLE_ID</ColNames>
+      <RefSchemaName>ERP</RefSchemaName>
+      <RefTableName>T_ROLE</RefTableName>
+      <RefKeyName>PK_T_ROLE</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="88" parent="58" name="FK_T_EMPLOY_REFERENCE_T_DEPART">
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <ColNames>DEPT_ID</ColNames>
+      <RefSchemaName>ERP</RefSchemaName>
+      <RefTableName>T_DEPARTMENT</RefTableName>
+      <RefKeyName>PK_T_DEPARTMENT</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="89" parent="59" name="GOODS_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="59" name="SUPPLIER_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <column id="91" parent="59" name="GOODS_NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <column id="92" parent="59" name="GOODS_TOP">
+      <Position>4</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <column id="93" parent="59" name="GOODS_FLOOR">
+      <Position>5</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <column id="94" parent="59" name="GOODS_PRICE">
+      <Position>6</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <column id="95" parent="59" name="GOODS_COST">
+      <Position>7</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <column id="96" parent="59" name="GOODS_NOTE">
+      <Position>8</Position>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+    </column>
+    <index id="97" parent="59" name="PK_T_GOODS">
+      <ObjectId>77863</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <TablespaceName>NEWTURE</TablespaceName>
+      <ColNames>GOODS_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="98" parent="59" name="PK_T_GOODS">
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <ColNames>GOODS_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_T_GOODS</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="99" parent="59" name="FK_T_GOODS_REFERENCE_T_SUPPLI">
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <ColNames>SUPPLIER_ID</ColNames>
+      <RefSchemaName>ERP</RefSchemaName>
+      <RefTableName>T_SUPPLIER</RefTableName>
+      <RefKeyName>PK_T_SUPPLIER</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="100" parent="60" name="LOG_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="101" parent="60" name="WG_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(15 digit)|0s</DataType>
+    </column>
+    <column id="102" parent="60" name="E_ID">
+      <Position>3</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <column id="103" parent="60" name="SUPPLIER_ID">
+      <Position>4</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <column id="104" parent="60" name="GOODS_ID">
+      <Position>5</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <column id="105" parent="60" name="LOG_TYPE">
+      <Position>6</Position>
+      <DataType>VARCHAR2(10 byte)|0s</DataType>
+    </column>
+    <column id="106" parent="60" name="LOG_DETAILS">
+      <Position>7</Position>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+    </column>
+    <column id="107" parent="60" name="LOG_TIME">
+      <Position>8</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <index id="108" parent="60" name="PK_T_LOG">
+      <ObjectId>77865</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <TablespaceName>NEWTURE</TablespaceName>
+      <ColNames>LOG_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="109" parent="60" name="PK_T_LOG">
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <ColNames>LOG_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_T_LOG</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="110" parent="60" name="FK_T_LOG_REFERENCE_T_WG">
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <ColNames>WG_ID</ColNames>
+      <RefSchemaName>ERP</RefSchemaName>
+      <RefTableName>T_WG</RefTableName>
+      <RefKeyName>PK_T_WG</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="111" parent="60" name="FK_T_LOG_REFERENCE_T_EMPLOY">
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <ColNames>E_ID</ColNames>
+      <RefSchemaName>ERP</RefSchemaName>
+      <RefTableName>T_EMPLOYEES</RefTableName>
+      <RefKeyName>PK_T_EMPLOYEES</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="112" parent="60" name="FK_T_LOG_REFERENCE_T_SUPPLI">
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <ColNames>SUPPLIER_ID</ColNames>
+      <RefSchemaName>ERP</RefSchemaName>
+      <RefTableName>T_SUPPLIER</RefTableName>
+      <RefKeyName>PK_T_SUPPLIER</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="113" parent="60" name="FK_T_LOG_REFERENCE_T_GOODS">
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <ColNames>GOODS_ID</ColNames>
+      <RefSchemaName>ERP</RefSchemaName>
+      <RefTableName>T_GOODS</RefTableName>
+      <RefKeyName>PK_T_GOODS</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="114" parent="61" name="MENU_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="115" parent="61" name="MENU_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(30 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="116" parent="61" name="MENU_LINK">
+      <Position>3</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <column id="117" parent="61" name="PARENT_ID">
+      <Position>4</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <column id="118" parent="61" name="MENU_IMG">
+      <Position>5</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <column id="119" parent="61" name="DISP_ORDER">
+      <Position>6</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <column id="120" parent="61" name="IS_HAVE">
+      <Position>7</Position>
+      <DataType>NUMBER(1 digit)|0s</DataType>
+    </column>
+    <index id="121" parent="61" name="PK_T_MENU">
+      <ObjectId>77867</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <TablespaceName>NEWTURE</TablespaceName>
+      <ColNames>MENU_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="122" parent="61" name="PK_T_MENU">
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <ColNames>MENU_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_T_MENU</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="123" parent="62" name="MLINK_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="124" parent="62" name="LINK_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <column id="125" parent="62" name="MENU_ID">
+      <Position>3</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <index id="126" parent="62" name="PK_T_MENU_ACCESSLINK">
+      <ObjectId>77869</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <TablespaceName>NEWTURE</TablespaceName>
+      <ColNames>MLINK_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="127" parent="62" name="PK_T_MENU_ACCESSLINK">
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <ColNames>MLINK_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_T_MENU_ACCESSLINK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="128" parent="62" name="FK_T_MENU_A_REFERENCE_T_ACCESS">
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <ColNames>LINK_ID</ColNames>
+      <RefSchemaName>ERP</RefSchemaName>
+      <RefTableName>T_ACCESSLINK</RefTableName>
+      <RefKeyName>PK_T_ACCESSLINK</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="129" parent="62" name="FK_T_MENU_A_REFERENCE_T_MENU">
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <ColNames>MENU_ID</ColNames>
+      <RefSchemaName>ERP</RefSchemaName>
+      <RefTableName>T_MENU</RefTableName>
+      <RefKeyName>PK_T_MENU</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="130" parent="63" name="RM_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="131" parent="63" name="ROLE_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <column id="132" parent="63" name="MENU_ID">
+      <Position>3</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <index id="133" parent="63" name="PK_T_RM">
+      <ObjectId>77871</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <TablespaceName>NEWTURE</TablespaceName>
+      <ColNames>RM_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="134" parent="63" name="PK_T_RM">
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <ColNames>RM_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_T_RM</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="135" parent="63" name="FK_T_RM_REFERENCE_T_ROLE">
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <ColNames>ROLE_ID</ColNames>
+      <RefSchemaName>ERP</RefSchemaName>
+      <RefTableName>T_ROLE</RefTableName>
+      <RefKeyName>PK_T_ROLE</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="136" parent="63" name="FK_T_RM_REFERENCE_T_MENU">
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <ColNames>MENU_ID</ColNames>
+      <RefSchemaName>ERP</RefSchemaName>
+      <RefTableName>T_MENU</RefTableName>
+      <RefKeyName>PK_T_MENU</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="137" parent="64" name="ROLE_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="138" parent="64" name="ROLE_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+    </column>
+    <index id="139" parent="64" name="PK_T_ROLE">
+      <ObjectId>77873</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <TablespaceName>NEWTURE</TablespaceName>
+      <ColNames>ROLE_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="140" parent="64" name="PK_T_ROLE">
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <ColNames>ROLE_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_T_ROLE</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="141" parent="65" name="SUPPLIER_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="142" parent="65" name="SUPPLIER_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <column id="143" parent="65" name="SUPPLIER_PEOPLE">
+      <Position>3</Position>
+      <DataType>VARCHAR2(15 byte)|0s</DataType>
+    </column>
+    <column id="144" parent="65" name="SUPPLIER_IPHONE">
+      <Position>4</Position>
+      <DataType>NUMBER(11 digit)|0s</DataType>
+    </column>
+    <column id="145" parent="65" name="SUPPLIER_BUSINESS">
+      <Position>5</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <column id="146" parent="65" name="SUPPLIER_ADDRESS">
+      <Position>6</Position>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+    </column>
+    <column id="147" parent="65" name="SUPPLIER_DELIVERY">
+      <Position>7</Position>
+      <DataType>VARCHAR2(10 byte)|0s</DataType>
+    </column>
+    <column id="148" parent="65" name="SUPPLIER_NOTE">
+      <Position>8</Position>
+      <DataType>VARCHAR2(100 byte)|0s</DataType>
+    </column>
+    <index id="149" parent="65" name="PK_T_SUPPLIER">
+      <ObjectId>77875</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <TablespaceName>NEWTURE</TablespaceName>
+      <ColNames>SUPPLIER_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="150" parent="65" name="PK_T_SUPPLIER">
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <ColNames>SUPPLIER_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_T_SUPPLIER</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="151" parent="66" name="WAREHOUSE_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="152" parent="66" name="WAREHOUSE_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <index id="153" parent="66" name="PK_T_WAREHOUSE">
+      <ObjectId>77877</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <TablespaceName>NEWTURE</TablespaceName>
+      <ColNames>WAREHOUSE_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="154" parent="66" name="PK_T_WAREHOUSE">
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <ColNames>WAREHOUSE_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_T_WAREHOUSE</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="155" parent="67" name="WG_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(15 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="156" parent="67" name="GOODS_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <column id="157" parent="67" name="WAREHOUSE_ID">
+      <Position>3</Position>
+      <DataType>NUMBER(10 digit)|0s</DataType>
+    </column>
+    <column id="158" parent="67" name="STOCK">
+      <Position>4</Position>
+      <DataType>NUMBER(15 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="159" parent="67" name="PK_T_WG">
+      <ObjectId>77879</ObjectId>
+      <CreatedTimestamp>2018-10-13.20:01:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <TablespaceName>NEWTURE</TablespaceName>
+      <ColNames>WG_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="160" parent="67" name="PK_T_WG">
+      <ModifiedTimestamp>2018-10-13.20:01:29</ModifiedTimestamp>
+      <ColNames>WG_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_T_WG</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="161" parent="67" name="FK_T_WG_REFERENCE_T_GOODS">
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <ColNames>GOODS_ID</ColNames>
+      <RefSchemaName>ERP</RefSchemaName>
+      <RefTableName>T_GOODS</RefTableName>
+      <RefKeyName>PK_T_GOODS</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="162" parent="67" name="FK_T_WG_REFERENCE_T_WAREHO">
+      <ModifiedTimestamp>2018-10-13.20:01:30</ModifiedTimestamp>
+      <ColNames>WAREHOUSE_ID</ColNames>
+      <RefSchemaName>ERP</RefSchemaName>
+      <RefTableName>T_WAREHOUSE</RefTableName>
+      <RefKeyName>PK_T_WAREHOUSE</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+  </database-model>
+</dataSource>

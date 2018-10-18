@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.erp.dao.UserDao">
+	
+	<sql id="userColumn">
+		<trim suffixOverrides="," >
+			<if test="eId != null and eId != ''">
+				e_id,
+			</if>
+			<if test="roleId != null and roleId != ''">
+				role_id,
+			</if>
+			<if test="deptId != null and deptId != ''">
+				dept_id,
+			</if>
+			<if test="eName != null and eName != ''">
+				e_name,
+			</if>
+			<if test="eIphone != null and eIphone != ''">
+				e_iphone,
+			</if>
+			<if test="eNote != null and eNote != ''">
+				e_note,
+			</if>
+			<if test="eAccount != null and eAccount != ''">
+				e_account,
+			</if>
+			<if test="ePassword != null and ePassword != ''">
+				e_password
+			</if>
+		</trim>
+	</sql>
+	
+	<sql id="userValuesColumn">
+		<trim suffixOverrides="," >
+			<if test="eId != null and eId != ''">
+				#{eId},
+			</if>
+			<if test="roleId != null and roleId != ''">
+				#{roleId},
+			</if>
+			<if test="deptId != null and deptId != ''">
+				#{deptId},
+			</if>
+			<if test="eName != null and eName != ''">
+				#{eName},
+			</if>
+			<if test="eIphone != null and eIphone != ''">
+				#{eIphone},
+			</if>
+			<if test="eNote != null and eNote != ''">
+				#{eNote},
+			</if>
+			<if test="eAccount != null and eAccount != ''">
+				#{eAccount},
+			</if>
+			<if test="ePassword != null and ePassword != ''">
+				#{ePassword}
+			</if>
+		</trim>
+	</sql>
+
+	<select id="findByName" parameterType="String" resultType="com.erp.pojo.Employees">
+		select * from t_employees where e_account=#{loginName}
+	</select>
+
+	<insert id="saveUser" parameterType="com.erp.pojo.Employees">
+		<selectKey keyProperty="eId" resultType="Integer" order="BEFORE">
+			select seq_employees.nextval from dual
+		</selectKey>
+		insert into t_employees(<include refid="userColumn" />)
+		values(<include refid="userValuesColumn" />)
+	</insert>
+</mapper>

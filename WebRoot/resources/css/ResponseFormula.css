@@ -1,0 +1,37 @@
+th{
+    text-align: center;
+}
+@media (max-width: 995px) {
+    .table thead tr th,.table tr td{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+@media (max-width: 500px) {
+    .row div select,.form-control,btn-default{
+        font-size: 10px;
+    }
+}
+@media (max-width: 995px) {
+    .table thead tr th,.table tr td{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+@media (max-width: 500px) {
+    .row div select,.form-control,btn-default{
+        font-size: 10px;
+    }
+}
+@media (min-width: 990px) {
+    .modal-dialog{
+        width: 80%;
+    }
+}
+@media (max-width: 460px) {
+    .modal-dialog{
+        width: 100%;
+    }
+}
