@@ -30,6 +30,7 @@ public class SystemController {
 	
 	@RequestMapping("/home")
 	public String home(Integer id,ModelMap modelMap){
+		System.out.println("111");
 		return "SystemPage/home";
 	}
 	
