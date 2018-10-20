@@ -59,7 +59,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             <div class="col-xs-12 col-sm-6 col-md-4 col-sm-offset-4 col-md-offset-4" style="text-align: center">
                 <div class="input-group">
                     <span class="input-group-addon">用户姓名</span>
-                    <input type="text" name="eName" maxlength="11" maxlength="15" class="form-control" placeholder="姓名不能为空"
+                    <input type="text" name="eName" maxlength="15"  class="form-control" placeholder="姓名不能为空"
                     value="${supplierList.get(0).supplierIphone }">
                 </div><br/>
             </div>

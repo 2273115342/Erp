@@ -32,7 +32,6 @@ public class SpringMvcUtils {
 	
 	/***
      * 获取URI的路径,如路径为http://www.newture.net/action/post.htm?method=add, 得到的值为"/action/post.htm"
-     * @param request
      * @return
      */
     public static String getRequestURI(){     

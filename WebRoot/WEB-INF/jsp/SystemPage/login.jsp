@@ -13,33 +13,35 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script src="<%=path %>/resources/js/jquery-3.2.1.min.js"></script>
     <script src="<%=path %>/resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="<%=path %>/resources/js/tool.js"></script>
+    <script src="<%=path %>/resources/js/login.js"></script>
 </head>
-<body>
-    <img src="<%=path %>/resources/img/timg.jpg" width="100%" height="100%" style="position: absolute;top: 0px;"/>
-    <div class="container">
+<body style="overflow:hidden;">
+    <img src="<%=path %>/resources/img/logbg.jpg" width="100%" height="100%" style="position: absolute;top: 0px;"/>
+    <div class="container" style="z-index: 10;">
        <div class="row">
-           <div class="col-xs-8 col-sm-5 col-md-4 col-xs-offset-2 col-sm-offset-3 col-md-offset-4" style="border: 1px solid #999;padding:20px;margin-top: 150px;background-color: white;">
+           <div class="col-xs-8 col-sm-5 col-md-4 col-xs-offset-2 col-sm-offset-3 col-md-offset-4" style="z-index: 10;opacity: 0.9;border: 1px solid #999;padding:20px;margin-top: 150px;background-color: white;">
                <h4 style="text-align: center">用户登录</h4>
                <form class="bs-example bs-example-form" role="form" action="loginCheck" method="post">
                    <div class="input-group">
                        <span class="input-group-addon">账号</span>
-                       <input type="text" value="${loginName }" name="loginName" class="form-control accountNumber" placeholder="请输入账号">
+                       <input type="text" maxlength="11" value="${loginName }" name="loginName" class="form-control accountNumber" placeholder="请输入账号">
                    </div>
                    <br>
                    <div class="input-group">
                        <span class="input-group-addon">密码</span>
-                       <input type="password" value="${password }"  name="password" class="form-control password" placeholder="请输入密码">
+                       <input type="password" maxlength="15" value="${password }"  name="password" class="form-control password" placeholder="请输入密码">
                    </div>
                    <br>
                    <div class="row">
                        <div class="col-xs-7 col-sm-7 col-md-7">
                            <div class="input-group">
-
-                               <input type="text" class="form-control identifyingCode " placeholder="请输入验证码">
+                               <input type="text" maxlength="4" class="form-control identifyingCode " placeholder="请输入验证码">
                            </div>
                        </div>
                        <div class="col-xs-5 col-sm-5 col-md-5">
-                           <img src="<%=path %>/resources/img/139-150323112055.jpg" class="img-responsive" alt="Cinque Terre" width="100" height="80">
+                           <canvas id="myCanvas" width="120" height="34" style="border:1px solid #d3d3d3;">
+                               您的浏览器不支持 HTML5 canvas 标签。
+                           </canvas>
                        </div>
                        <div class="col-xs-6 col-sm-6 col-md-6" style="margin-top: 20px;">
                            <button type="submit" class="btn btn-success btn-block login">登录</button>
@@ -67,6 +69,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</div>
 		<!-- /.modal -->
 	</div>
+
 </body>
 <c:if test="${message!=null && message == 1 }">
 	<script type="text/javascript">
@@ -85,16 +88,4 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</script>
 </c:if>
 
-<script type="text/javascript">
-    $(function(){
-        $(".login").on("click",function(){
-            if(checkInput(".accountNumber","账号不能为空")) return false; //校验账号
-            if(checkInput(".password","密码不能为空")) return false; //校验密码
-            if(checkInput(".identifyingCode","验证码不能为空")) return false;  //校验验证码
-        });
-        $(".addUser").click(function(){
-        	ajaxSubmit("user/add", ".modal-body", null);
-        });
-    });
-</script>
 </html>

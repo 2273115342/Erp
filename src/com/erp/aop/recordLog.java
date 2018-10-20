@@ -28,22 +28,21 @@ public class recordLog {
 	//前置通知
 	@Before("myPointCut()")
 	public void mybefore(){
-		System.out.println("前置通知....");
+		/*System.out.println("前置通知....");*/
 	}
 	
 	//后置通知
 	@AfterReturning("myPointCut()")
 	public void myAfterReturning(){
-		System.out.println("后置通知....");
+		/*System.out.println("后置通知....");*/
 	}
 	
 	//环绕通知
 	@Around("myPointCut()")
 	public Object myAround(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
 		//开始
-		System.out.println("前环绕通知....");
+		/*System.out.println("前环绕通知....");*/
 		Object object = proceedingJoinPoint.proceed();
-		System.out.println("记录日志");
 		logger.info("记录日志。。。。");
 		return object;
 	}
@@ -56,6 +55,6 @@ public class recordLog {
 	
 	@After("myPointCut()")
 	public void myAfter(){
-		System.out.println("最终通知....");
+		/*System.out.println("最终通知....");*/
 	}
 }

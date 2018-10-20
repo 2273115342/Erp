@@ -31,7 +31,7 @@
 			</if>
 		</trim>
 	</sql>
-	
+
 	<sql id="userValuesColumn">
 		<trim suffixOverrides="," >
 			<if test="eId != null and eId != ''">

@@ -32,18 +32,20 @@ public class MenuServiceImpl implements MenuService {
 		List<Menu> haveMenu = menuDao.findByRoleId(roleId);
 		List<Menu> newMenu = new ArrayList<Menu>();
 		for (int i = 0; i < allMenu.size(); i++) {  //设置好一级菜单
-			if(allMenu.get(i).getParentId()==null){
+			Menu menu = allMenu.get(i);
+			if(menu.getParentId()==null){
 				for (int j = 0; j < haveMenu.size(); j++) {
-					if(haveMenu.get(j).getMenuId()==allMenu.get(i).getMenuId()){ //判断是否拥有这个一级菜单
-						allMenu.get(i).setIsHave(1);
+					if(haveMenu.get(j).getMenuId()==menu.getMenuId()){ //判断是否拥有这个一级菜单
+						menu.setIsHave(1);
 					}
 				}
-				newMenu.add(allMenu.get(i)); //添加所有的一级菜单到新的菜单列表
+				newMenu.add(menu); //添加所有的一级菜单到新的菜单列表
 			}
 		}
 		
 		for (int i = 0; i < newMenu.size(); i++) {  //为首级菜单添加子菜单
-			newMenu.get(i).setChildMenu(getChildMenu(newMenu.get(i).getMenuId(), allMenu, haveMenu));
+			Menu menu = newMenu.get(i);
+			menu.setChildMenu(getChildMenu(menu.getMenuId(), allMenu, haveMenu));
 		}
 		return newMenu;
 	}
