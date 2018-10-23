@@ -53,4 +53,11 @@ public interface DepartmentDao {
 	 * @return
 	 */
 	List<Department> findAll(Paging paging);
+
+	/**
+	 * 根据用户id查询部门信息
+	 * @param userId
+	 * @return
+	 */
+	Department findByUserId(Integer userId);
 }

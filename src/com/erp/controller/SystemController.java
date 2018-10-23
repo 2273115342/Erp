@@ -29,8 +29,7 @@ public class SystemController {
 	private MenuService menuService;
 	
 	@RequestMapping("/home")
-	public String home(Integer id,ModelMap modelMap){
-		System.out.println("111");
+	public String home(){
 		return "SystemPage/home";
 	}
 	
@@ -40,19 +39,21 @@ public class SystemController {
 	}
 	
 	@RequestMapping("/top")
-	public String top(Integer id,ModelMap modelMap){
+	public String top(){
 		return "SystemPage/top";
 	}
 
 	@RequestMapping("/left")
-	public String left(Integer id,ModelMap modelMap){
-		List<Menu> menus = menuService.getUserMenu(SystemUtils.getLoginUser().geteId());
-		modelMap.put("MenuList", menus);
+	public String left(ModelMap modelMap){
+		if(SystemUtils.getLoginUser() != null){
+			List<Menu> menus = menuService.getUserMenu(SystemUtils.getLoginUser().geteId());
+			modelMap.put("MenuList", menus);
+		}
 		return "SystemPage/left";
 	}
 	
 	@RequestMapping("/right")
-	public String right(Integer id,ModelMap modelMap){
+	public String right(){
 		return "SystemPage/right";
 	}
 	
@@ -68,8 +69,12 @@ public class SystemController {
 	}
 	
 	@RequestMapping(value="/quit")
-	public String quit(){
-		SpringMvcUtils.getSession().removeAttribute("loginUser");
+	public String quit(ModelMap modelMap){
+		if(SpringMvcUtils.getSession().getAttribute("loginUser") != null
+				&& SpringMvcUtils.getSession().getAttribute("accesslink") != null){
+			SpringMvcUtils.getSession().removeAttribute("loginUser"); //删除用户信息
+			SpringMvcUtils.getSession().removeAttribute("accesslink"); //删除用户拥有的访问链接
+		}
 		return "redirect:login";
 	}
 }

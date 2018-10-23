@@ -1,8 +1,11 @@
 package com.erp.dao;
 
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import com.erp.pojo.Employees;
+
+import java.util.List;
 
 /**
  * @Description: TODO(这里用一句话描述这个类的作用)
@@ -26,4 +29,10 @@ public interface UserDao {
 	 * @return
 	 */
 	Integer saveUser(Employees employees);
+
+	/**
+	 * @param employees
+	 * @return
+	 */
+	List<Employees> findByUserRole(Employees employees);
 }

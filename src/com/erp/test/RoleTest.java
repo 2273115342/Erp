@@ -10,7 +10,7 @@ import com.erp.dao.RoleDao;
 import com.erp.pojo.Role;
 
 /**
-* @Description: TODO(用户的测试类)
+* @Description: TODO(角色的测试类)
 * @author JS
 * 2018年10月4日 上午11:36:33
  */
@@ -20,12 +20,47 @@ public class RoleTest {
 	
 	@Autowired
 	private RoleDao roleDao;
-	
+
 	@Test
-	public void findByNameTest(){
+	public void findByUserId(){
+		Role role = roleDao.findByUserId(1);
+		System.out.println("role = " + role);
+	}
+
+	@Test
+	public void addRole(){
+		Role role = new Role();
+		role.setRoleName("监管部");
+		roleDao.saveRole(role);
+	}
+
+	@Test
+	public void updateRole(){
+		Role role = new Role();
+		role.setRoleId(5);
+		role.setRoleName("修改版监管部");
+		roleDao.saveRole(role);
+	}
+
+	@Test
+	public void findById(){
+		System.out.println(roleDao.findById(4));
+	}
+
+
+
+	@Test
+	public void deleteRole(){
+		roleDao.deleteRole(9);
+	}
+
+
+	@Test
+	public void findAllTest(){
 		for(Role role : roleDao.findAll()){
 			System.out.println(role);
 		}
 	}
-	
+
+
 }

@@ -59,5 +59,10 @@ public class DepartnebtTest {
 	public void findAllTest(){
 		System.out.println(departmentDao.findAll(new Paging(1, 3)));
 	}
+
+	@Test
+	public void findByUserId(){
+		System.out.println(departmentDao.findByUserId(2));
+	}
 	
 }

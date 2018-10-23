@@ -24,10 +24,13 @@ public class LoginInterceptor implements HandlerInterceptor{
 			String uri = SpringMvcUtils.getRequestURI();
 			if(!uri.startsWith("/Erp/login") && !uri.startsWith("/Erp/loginCheck") &&
 					!uri.startsWith("/Erp/user/add") && !uri.startsWith("/Erp/resources") &&
-					!uri.startsWith("/Erp/user/findByAccount")){
-				System.out.println("拦截："+uri);
+					!uri.startsWith("/Erp/user/findByAccount") && !uri.startsWith("/Erp/quit")){
+				System.out.println("拦截：" + uri);
+				request.setAttribute("noLogin", 1);
+
+				request.getRequestDispatcher("/login").forward(request, response);
 				//重定向到登录页面
-				response.sendRedirect(request.getSession().getServletContext().getContextPath()+"/login");
+				/*response.sendRedirect(request.getSession().getServletContext().getContextPath()+"/login");*/
 			}
 		}
 		return true;

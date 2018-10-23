@@ -18,7 +18,6 @@ function ajaxSubmit(url,id,date){
             $(id).html(result);
         },
         error:function(XMLHttpRequest, textStatus, errorThrown){
-            popUpMessage("body","加载失败...",3000,30,45,false);
             $(".lodingImg").remove();
         },
     });

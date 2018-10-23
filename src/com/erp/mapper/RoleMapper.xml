@@ -2,7 +2,58 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.erp.dao.RoleDao">
+
+	<sql id="roleColumn">
+		<trim suffixOverrides="," >
+			<if test="roleId != null and roleId != ''">
+				role_id,
+			</if>
+			<if test="roleName != null and roleName != ''">
+				role_name
+			</if>
+		</trim>
+	</sql>
+
+	<sql id="supplierValuesColumn">
+		<trim suffixOverrides="," >
+			<if test="roleId != null and roleId != ''">
+				#{roleId},
+			</if>
+			<if test="roleName != null and roleName != ''">
+				#{roleName}
+			</if>
+		</trim>
+	</sql>
+
 	<select id="findAll" resultType="com.erp.pojo.Role">
-		select * from t_role
+		select * from t_role order  by ROLE_ID
+	</select>
+
+	<select id="findByUserId" parameterType="Integer" resultType="com.erp.pojo.Role">
+		select r.ROLE_ID,r.ROLE_NAME from T_EMPLOYEES e left join T_ROLE r
+		on e.ROLE_ID = r.ROLE_ID where e.E_ID = #{userId}
+	</select>
+
+	<insert id="saveRole" parameterType="com.erp.pojo.Role">
+		<selectKey keyProperty="roleId" resultType="Integer" order="BEFORE">
+			select seq_role.nextval from dual
+		</selectKey>
+		insert into T_ROLE values(#{roleId},#{roleName})
+	</insert>
+
+	<delete id="deleteRole" parameterType="Integer">
+		delete T_ROLE where role_id = #{roleId}
+	</delete>
+
+	<update id="updateRole" parameterType="com.erp.pojo.Role">
+		update T_ROLE set
+		<if test="roleName != null and roleName != ''">
+			role_name = #{roleName}
+		</if>
+		where role_id = #{roleId}
+	</update>
+
+	<select id="findById" parameterType="Integer" resultType="com.erp.pojo.Role">
+		select * from T_ROLE where ROLE_ID = #{roleId}
 	</select>
 </mapper>

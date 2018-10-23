@@ -30,10 +30,18 @@
 		resultType="com.erp.pojo.Department">
 		select * from t_department where dept_id = #{deptId}
 	</select>
+
+	<select id="findByUserId" parameterType="Integer"
+	        resultType="com.erp.pojo.Department">
+		select d.DEPT_ID,d.DEPT_NAME from t_department d left join T_EMPLOYEES e
+		on d.DEPT_ID = e.DEPT_ID where e.E_ID = #{userId}
+	</select>
 	
 	<select id="findAll" resultType="com.erp.pojo.Department">
 		select dept_id, dept_name from (select t.*,rownum r from (
 		 select d.*,rownum from t_department d order by d.dept_id) t
 		 where rownum<![CDATA[ <= ]]>#{offset} * #{limit})where r>(#{offset}-1)*#{limit}
 	</select>
+
+
 </mapper>

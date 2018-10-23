@@ -14,6 +14,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <script src="<%=path %>/resources/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
     <script src="<%=path %>/resources/js/tool.js"></script>
     <script src="<%=path %>/resources/js/login.js"></script>
+	<c:if test="${noLogin != null  && noLogin == 1}">
+		<script type="text/javascript">
+			window.location.href = "./login";
+		</script>
+	</c:if>
 </head>
 <body style="overflow:hidden;">
     <img src="<%=path %>/resources/img/logbg.jpg" width="100%" height="100%" style="position: absolute;top: 0px;"/>
